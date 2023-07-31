@@ -1,14 +1,14 @@
-// abstração, encapsulamento, herança e polimorfismo
+// abstração, encapsulamento, herança e polimorfismo.
 
-// abstração permite isolar do objeto somente attrs essenciais
+// abstração permite isolar do objeto somente attrs essenciais.
 
-// encapsulamento ocultar partes internas ao funcionamento do objeto
+// encapsulamento ocultar partes internas ao funcionamento do objeto.
 
-// herança visa passar características para um objeto em hierarquia inferior, ou seja, a classe inferior é a classe superior
+// herança visa passar características para um objeto em hierarquia inferior, ou seja, a classe inferior é a classe superior.
 
 // polimorfismo possui a ideia de que a classe filha tem a capacidade de assumir diferentes formas.
 
-// # modificadores de acesso
+// # modificadores de acesso.
 
 // public acessíveis dentro da própria classe, bem como fora dela.
 
