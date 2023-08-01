@@ -26,3 +26,11 @@ const objC: {
 };
 
 console.log(objC);
+
+// Record<keyType, valueType> ... example for mix values
+const objD: Record<string, string | number> = {
+  keyA: 'A',
+  keyB: 2,
+};
+
+console.log(objD);
