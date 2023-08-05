@@ -6,7 +6,7 @@
 
 // herança visa passar características para um objeto em hierarquia inferior, ou seja, a classe inferior é a classe superior.
 
-// polimorfismo possui a ideia de que a classe filha tem a capacidade de assumir diferentes formas.
+// polimorfismo é no sentido de que a classe filha tem a capacidade de assumir diferentes formas, sem deixar de 'ser' o tipo herdado.
 
 // # modificadores de acesso.
 

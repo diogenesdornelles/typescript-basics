@@ -4,10 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/output.css">
-  <title>Document</title>
+  <title>Triangle</title>
 </head>
 <body>
-  <p class="bg-red-100">Hello world</p>
+  <div class="flex flex-row gap-16 mt-12">
+    <div class="flex flex-col ml-24 mt-28 shadow-md p-4 max-w-xs outline">
+      <div class="flex flex-col p-2 mb-6">
+        <label for="input-point-a-x">Point v1-x</label>
+        <input type="text" name="point-a-x" id="input-point-a-x" class="border">
+        <label for="input-point-a-y">Point v1-y</label>
+        <input type="text" name="point-a-y" id="input-point-a-y" class="border">
+      </div>
+      <div class="flex flex-col p-2 mb-6">
+        <label for="input-point-b-x">Point v2-x</label>
+        <input type="text" name="point-b-x" id="input-point-b-x" class="border">
+        <label for="input-point-b-y">Point v2-y</label>
+        <input type="text" name="point-b-y" id="input-point-b-y" class="border">
+      </div>
+      <div class="flex flex-col p-2 mb-6">
+        <label for="input-point-c-x">Point v3-x</label>
+        <input type="text" name="point-c-x" id="input-point-c-x" class="border">
+        <label for="input-point-c-y">Point v3-y</label>
+        <input type="text" name="point-c-y" id="input-point-c-y" class="border">
+      </div>
+      <div class="flex flex-col p-2 mb-6">
+        <label for="input-range">Scale</label>
+        <input type="range" name="" id="input-range" min="1" max="10" step="1">
+      </div>
+    </div>
+    <canvas id="canvas" width="500" height="500" class="shadow outline"></canvas>
+  </div>
+  <script src="./assets/js/bundle.js"></script>
 </body>
-<script src="./assets/js/bundle.js"></script>
 </html>

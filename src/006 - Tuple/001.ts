@@ -4,7 +4,7 @@ const dadosA: [number, string] = [123, 'Luiz']; // não há como criar um tercei
 
 const dadosB: [number, string, string?] = [123, 'Luiz']; // terceiro elemento é opcional
 
-const dadosC: [number, ...string[]] = [123, 'Luiz']; // somente o primeiro precisa ser number.
+const dadosC: [number, ...string[]] = [123, 'Luiz']; // somente o primeiro precisa ser number. Pemrite estender.
 
 const dadosD: readonly [number, string] = [123, 'Luiz']; // Readonly: a tupla se torna imutável. Não é possível usar métodos como pop ou push.
 

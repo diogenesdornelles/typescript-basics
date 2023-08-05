@@ -1,5 +1,5 @@
 //Array<T> - T[]
-
+// rest operator empacota em um array
 function multArgs(...args: Array<number>): number {
   return args.reduce((ac, value) => ac * value, 1);
 }

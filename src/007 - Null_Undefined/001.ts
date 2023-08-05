@@ -13,7 +13,10 @@ export function createPerson(
   };
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const squareOf: (a: any) => any = (a) => {
   if (typeof a !== 'number') return null;
   return a ** 2;
 };
+
+console.log(squareOf(2));

@@ -6,7 +6,7 @@ const objA = {
 
 console.log(objA.keyA);
 
-// ts não reconhece a forma do objeto. Posso criar outras chaves.
+// Utilizando Record ts não reconhece a forma do objeto. Posso criar outras chaves adicionais no curso da instrução.
 const objB: Record<string, unknown> = {
   keyA: 'valor a',
   keyB: 'valor b',
@@ -14,7 +14,8 @@ const objB: Record<string, unknown> = {
 
 console.log(objB);
 
-// estrutura equivalente ao Record, mas há o reconhecimento de forma. keyC é opcional. Readonly apenas leitura.
+// Estrutura equivalente ao Record, mas há o reconhecimento de forma. keyC é opcional. Readonly apenas leitura.
+// [key: string]: unknown, no entanto permite a extensão
 const objC: {
   keyA: string;
   readonly keyB: string;
@@ -27,7 +28,7 @@ const objC: {
 
 console.log(objC);
 
-// Record<keyType, valueType> ... example for mix values
+// Record<keyType, valueType> ... example for mixed values
 const objD: Record<string, string | number> = {
   keyA: 'A',
   keyB: 2,

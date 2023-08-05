@@ -17,12 +17,12 @@ class Department {
 class Employee {
   public readonly name: string;
   public readonly lastName: string;
-  public _department: Department['name'];
+  public _department?: Department['name'];
   constructor(name: string, lastName: string) {
     this.name = name;
     this.lastName = lastName;
   }
-  get department(): string {
+  get department(): string | undefined {
     return this._department;
   }
 
