@@ -1,4 +1,4 @@
-// sem anotação, ts reconhece chaves, mas obsta seja o objeto estendido. Não poso criar outras chaves.
+// sem anotação, ts reconhece chaves, mas obsta seja o objeto estendido. Não posso criar outras chaves.
 const objA = {
   keyA: 'valor a',
   keyB: 'valor b',

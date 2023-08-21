@@ -23,3 +23,5 @@ function sum(a: number, b: number) {
 const sum_2: (a: number, b: number) => number = (a, b) => {
   return a + b;
 };
+
+export default 1;
