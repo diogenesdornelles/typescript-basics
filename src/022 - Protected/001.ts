@@ -51,7 +51,7 @@ class Enterprise {
 
 class Udemy extends Enterprise {
   constructor() {
-    super('Udemu', '11.111.111/000-1-11');
+    super('Udemy', '11.111.111/000-1-11');
   }
   pop(): Department | null {
     const department = this._departments.pop();

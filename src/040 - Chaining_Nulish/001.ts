@@ -1,7 +1,7 @@
 type Documento = {
   titulo: string;
   texto: string;
-  data?: Date;
+  data?: Date; // set optional
 };
 
 const documento: Documento = {

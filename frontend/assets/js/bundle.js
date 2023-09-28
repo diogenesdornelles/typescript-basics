@@ -77,14 +77,14 @@ class Triangle {
 class FrontEndMethods {
 }
 class FrontEndHandling extends FrontEndMethods {
-    constructor(inputAX, inputAY, inputBX, inputBY, inputCX, inputCY, points = {
+    constructor(inputAX, inputAY, inputBX, inputBY, inputCX, inputCY, inputScale, points = {
         ax: 400,
         ay: 100,
         bx: 0,
         by: 300,
         cx: 0,
         cy: 50,
-    }, triangle, context) {
+    }, triangle, context, scaleFactor = 1) {
         super();
         this.inputAX = inputAX;
         this.inputAY = inputAY;
@@ -92,9 +92,11 @@ class FrontEndHandling extends FrontEndMethods {
         this.inputBY = inputBY;
         this.inputCX = inputCX;
         this.inputCY = inputCY;
+        this.inputScale = inputScale;
         this.points = points;
         this.triangle = triangle;
         this.context = context;
+        this.scaleFactor = scaleFactor;
     }
     getInputs() {
         this.inputAX = document.querySelector('#input-point-a-x');
@@ -103,6 +105,7 @@ class FrontEndHandling extends FrontEndMethods {
         this.inputBY = document.querySelector('#input-point-b-y');
         this.inputCX = document.querySelector('#input-point-c-x');
         this.inputCY = document.querySelector('#input-point-c-y');
+        this.inputScale = document.querySelector('#input-range-scale');
     }
     addListeners() {
         this.inputAX?.addEventListener('input', (e) => this.getValues(e));
@@ -111,6 +114,7 @@ class FrontEndHandling extends FrontEndMethods {
         this.inputAY?.addEventListener('input', (e) => this.getValues(e));
         this.inputBY?.addEventListener('input', (e) => this.getValues(e));
         this.inputCY?.addEventListener('input', (e) => this.getValues(e));
+        this.inputScale?.addEventListener('change', (e) => this.getValues(e));
     }
     getValues(e) {
         if ('target' in e) {
@@ -141,14 +145,18 @@ class FrontEndHandling extends FrontEndMethods {
                         this.points.cy = parseFloat(value);
                         this.mountTriangle();
                         break;
+                    case 'input-range-scale':
+                        this.scaleFactor = parseFloat(value) / 4;
+                        this.mountTriangle();
+                        break;
                 }
             }
         }
     }
     mountTriangle() {
-        const pointA = new Point(this.points.ax, this.points.ay);
-        const pointB = new Point(this.points.bx, this.points.by);
-        const pointC = new Point(this.points.cx, this.points.cy);
+        const pointA = new Point(this.points.ax * this.scaleFactor, this.points.ay * this.scaleFactor);
+        const pointB = new Point(this.points.bx * this.scaleFactor, this.points.by * this.scaleFactor);
+        const pointC = new Point(this.points.cx * this.scaleFactor, this.points.cy * this.scaleFactor);
         this.triangle = new Triangle(pointA, pointB, pointC);
         if (!this.context)
             this.setContext();
