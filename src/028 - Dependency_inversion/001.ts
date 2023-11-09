@@ -28,7 +28,7 @@ const pencil = new Pencil('lapis');
 class Writer {
   constructor(
     private _name: string,
-    // inversão de dependência com uma associação fraca (opcional(?), pois escritor existe independentemente de Tool)
+    // inversão de dependência com uma associação fraca (opcional(?), pois escritor existe independentemente de Tool. _tool pode ser qualquer objeto de uma classe filha de Tool)
     private _tool?: Tool,
   ) {}
 
